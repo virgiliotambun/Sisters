@@ -1,94 +1,77 @@
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import Header from '../../components/molecules/Header'; // Assuming this is your custom header
-import TextInput from '../../components/molecules/TextInput'; // Assuming this is your custom input
-import Button from '../../components/atoms/Button';   // Assuming this is your custom button
-import Gap from '../../components/atoms/Gap';     // Assuming this is your custom gap
+import Header from '../../components/molecules/Header';
+import TextInput from '../../components/molecules/TextInput';
+import Button from '../../components/atoms/Button';
+import Gap from '../../components/atoms/Gap';
 
 const SignUp = () => {
   return (
     <View style={styles.pageContainer}>
-      <Header title="Create Account" />
+      <Header title="Sign Up" />
       <View style={styles.contentContainer}>
-
-        <View style={styles.customerContainer}>
-            <TouchableOpacity style={styles.customerButton}>
-                <Text style={styles.customerText}>Customer</Text>
-            </TouchableOpacity>
+        <View style={styles.profilContainer}>
+          <View style={styles.profil}>
+            <View style={styles.add}>
+              <Text style={styles.addLabel}>Add Photo</Text>
+            </View>
+          </View>
         </View>
-        <Gap height={24} />
-
-        <TextInput
-          label="Firstname"
-          placeholder="Firstname"
-          style={styles.inputStyle}
-        />
         <Gap height={16} />
-        <TextInput
-          label="Lastname"
-          placeholder="Lastname"
-          style={styles.inputStyle}
-        />
+        <TextInput label="Full Name" placeholder="Type your full name" />
         <Gap height={16} />
         <TextInput
           label="Email Address"
-          placeholder="Email Address"
-          style={styles.inputStyle}
+          placeholder="Type your email Address"
         />
         <Gap height={16} />
-        <TextInput
-          label="Password"
-          placeholder="Password"
-          secureTextEntry={true}
-          style={styles.inputStyle}
-        />
+        <TextInput label="Password" placeholder="Type your password" />
         <Gap height={24} />
-        <Button label="Continue" color="#FFCCE1" textColor="white" />
+        <Button label="Continue" />
       </View>
     </View>
   );
 };
 
+export default SignUp;
+
 const styles = StyleSheet.create({
   pageContainer: {
     flex: 1,
-    backgroundColor: '#FFFFFF', // White background for the whole page
   },
   contentContainer: {
+    backgroundColor: '#FFFFFF',
+    marginTop: 24,
     flex: 1,
     paddingHorizontal: 24,
-    paddingTop: 20, // Add some top padding to the content
   },
-  inputStyle: {
-    backgroundColor: '#F2F9FF', // Light blue background for inputs
-    borderRadius: 8,         // Rounded corners for inputs
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderWidth: 0,       // Remove the border
+  profilContainer: {
+    marginTop: 26,
+    alignItems: 'center',
   },
-    customerContainer: {
-        flexDirection: 'row',
-        justifyContent: 'flex-start', // Align items to the start (left)
-        marginTop: 10,
-    },
-    customerButton: {
-        backgroundColor: '#FFCCE1', // Light pink for the Customer button
-        borderRadius: 20,
-        paddingHorizontal: 20,
-        paddingVertical: 8,
-        shadowColor: '#000', // Add shadow for the button
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-    },
-    customerText: {
-        color: 'white',
-        fontWeight: 'bold',
-    },
+  profil: {
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: 130,
+    width: 130,
+    borderRadius: 100,
+    borderWidth: 2,
+    borderColor: '#8D92A3',
+    borderStyle: 'dashed',
+  },
+  add: {
+    backgroundColor: '#F0F0F0',
+    width: 100,
+    height: 100,
+    borderRadius: 100 / 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  addLabel: {
+    fontFamily: 'Poppins-Light',
+    fontSize: 14,
+    width: 40,
+    textAlign: 'center',
+  },
 });
-
-export default SignUp;
