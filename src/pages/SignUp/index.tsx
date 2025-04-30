@@ -1,20 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import Header from '../../components/molecules/Header'; // Assuming this is your custom header
 import TextInput from '../../components/molecules/TextInput'; // Assuming this is your custom input
-import Button from '../../components/atoms/Button';   // Assuming this is your custom button
-import Gap from '../../components/atoms/Gap';     // Assuming this is your custom gap
+import Button from '../../components/atoms/Button'; // Assuming this is your custom button
+import Gap from '../../components/atoms/Gap'; // Assuming this is your custom gap
 
 const SignUp = () => {
   return (
     <View style={styles.pageContainer}>
       <Header title="Create Account" />
       <View style={styles.contentContainer}>
-
         <View style={styles.customerContainer}>
-            <TouchableOpacity style={styles.customerButton}>
-                <Text style={styles.customerText}>Customer</Text>
-            </TouchableOpacity>
+          <TouchableOpacity style={styles.customerButton}>
+            <Text style={styles.customerText}>Customer</Text>
+          </TouchableOpacity>
         </View>
         <Gap height={24} />
 
@@ -61,34 +60,34 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     backgroundColor: '#F2F9FF', // Light blue background for inputs
-    borderRadius: 8,         // Rounded corners for inputs
+    borderRadius: 8, // Rounded corners for inputs
     paddingHorizontal: 16,
     paddingVertical: 10,
-    borderWidth: 0,       // Remove the border
+    borderWidth: 0, // Remove the border
   },
-    customerContainer: {
-        flexDirection: 'row',
-        justifyContent: 'flex-start', // Align items to the start (left)
-        marginTop: 10,
+  customerContainer: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start', // Align items to the start (left)
+    marginTop: 10,
+  },
+  customerButton: {
+    backgroundColor: '#FFCCE1', // Light pink for the Customer button
+    borderRadius: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+    shadowColor: '#000', // Add shadow for the button
+    shadowOffset: {
+      width: 0,
+      height: 2,
     },
-    customerButton: {
-        backgroundColor: '#FFCCE1', // Light pink for the Customer button
-        borderRadius: 20,
-        paddingHorizontal: 20,
-        paddingVertical: 8,
-        shadowColor: '#000', // Add shadow for the button
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-    },
-    customerText: {
-        color: 'white',
-        fontWeight: 'bold',
-    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  customerText: {
+    color: 'white',
+    fontWeight: 'bold',
+  },
 });
 
 export default SignUp;
