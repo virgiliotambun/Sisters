@@ -3,9 +3,10 @@ import SplashScreen from './src/pages/SplashScreen';
 import SignIn from './src/pages/SignIn';
 import SignUp from './src/pages/SignUp';
 import ForgotPassword from './src/pages/ForgotPassword';
+import OrderPlaced from './src/pages/OrderPlaced';
 
 const App = () => {
-  return < SplashScreen />;
+  return <OrderPlaced />;
 };
 
 export default App;
