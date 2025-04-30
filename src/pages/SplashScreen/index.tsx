@@ -1,27 +1,29 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {Logo} from '../../assets';
+import { StyleSheet, View, Image } from 'react-native';
 
 const SplashScreen = () => {
   return (
     <View style={styles.container}>
-      <Logo />
-      <Text style={styles.title}>Money Tracker</Text>
+      <Image
+        source={{ uri: 'https://i.ibb.co/Z8n2Wvz/sisters.png' }} //  USE a regular image.
+        style={styles.logo}
+      />
     </View>
   );
 };
 
-export default SplashScreen;
-
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#02CF8E',
+    backgroundColor: '#FFC1DA', // Pink background
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  title: {
-    fontFamily: 'Poppins-Medium',
-    fontSize: 32,
+  logo: {
+    width: 120,
+    height: 120,
+    resizeMode: 'contain',
   },
 });
+
+export default SplashScreen;
