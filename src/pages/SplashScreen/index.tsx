@@ -1,16 +1,19 @@
 import React from 'react';
 import { StyleSheet, View, Image } from 'react-native';
+import { Logo } from '../../assets';
 
 const SplashScreen = () => {
   return (
     <View style={styles.container}>
       <Image
-        source={{ uri: 'https://i.ibb.co/Z8n2Wvz/sisters.png' }} //  USE a regular image.
+        source={Logo} //  USE a regular image.
         style={styles.logo}
       />
     </View>
   );
 };
+
+
 
 const styles = StyleSheet.create({
   container: {

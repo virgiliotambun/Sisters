@@ -1,4 +1,4 @@
-import Logo from './Logo.svg';
+import Logo from './logo.png';
 import arrowBack from './arrow-back.svg';
 import OrderSuccessful from './OrderSuccessful.svg';
 
