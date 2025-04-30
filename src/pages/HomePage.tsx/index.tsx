@@ -3,6 +3,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Button from '../../components/atoms/Button';
 import Gap from '../../components/atoms/Gap';
+import TextInput from '../../components/molecules/TextInput';
 
 const HomePage = () => {
   return (
@@ -16,7 +17,7 @@ const HomePage = () => {
 
 const MyTabs = createBottomTabNavigator({
   screens: {
-    Home: HomeScreen,
+    Home: HomePage,
     Profile: ProfileScreen,
   },
 });
