@@ -3,10 +3,11 @@ import SplashScreen from './src/pages/SplashScreen';
 import SignIn from './src/pages/SignIn';
 import SignUp from './src/pages/SignUp';
 import ForgotPassword from './src/pages/ForgotPassword';
-import OrderPlaced from './src/pages/OrderPlaced';
-
+import Notifications from './src/pages/Notifications';
+import SearchResult from './src/pages/SearchResult';
+import Settingss from './src/pages/Settingss';
 const App = () => {
-  return <OrderPlaced />;
+  return <Settings />;
 };
 
 export default App;
