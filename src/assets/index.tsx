@@ -1,4 +1,5 @@
 import Logo from './Logo.svg';
-import arrowBack './arrow-back.svg';
+import arrowBack from './arrow-back.svg';
+import OrderSuccessful from './OrderSuccessful.svg';
 
-export {Logo, arrowBack};
+export {Logo, arrowBack, OrderSuccessful};
