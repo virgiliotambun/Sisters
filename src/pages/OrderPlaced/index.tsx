@@ -2,7 +2,6 @@ import {StyleSheet, Text, View, Image} from 'react-native';
 import React from 'react';
 import Button from '../../components/atoms/Button';
 import Gap from '../../components/atoms/Gap';
-import {OrderSuccessful} from '../../assets';
 
 const OrderPlaced = ({navigation}) => {
   return (
